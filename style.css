@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(85, 85, 85);
+    text-align: center;
+    font-family: monospace;
+    color: black;
+}
+h1 {
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    position: relative;
+    font-family: monospace;
+    color: rgb(255, 255, 255);}
+
+button[name="button1"] {
+    position: relative;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: monospace;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(95, 95, 95);
+    border-radius: 5px;
+    color: white;
+}
+button[name="button2"] {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: monospace;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(95, 95, 95);
+    border-radius: 5px;
+    color: white;
+}
+button[name="button3"] {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: monospace;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(95, 95, 95);
+    border-radius: 5px;
+    color: white;
+}
+fencedframe {
+    border: none;
+    width: 80px;
+    height: 5px;
+    background-color: black;
+    position: relative;
+}   
+button:hover {
+    box-shadow: 0 0 10px rgb(150, 150, 150);
+    background-color: rgb(65, 65, 65);
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+button:not(:hover) {
+   
+    background-color: rgb(95, 95, 95);
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
