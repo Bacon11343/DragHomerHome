@@ -2,22 +2,38 @@ const Title = document.getElementById("Title");
 const Home = document.getElementById("button1");
 const Dashboard = document.getElementById("button2");
 const Settings = document.getElementById("button3");
-const frame = document.getElementById("frame");
-function bro() {
- frame.style.left = -352 + "px";
- frame.style.bottom = -20 + "px";
-}
-bro();
+
 
 Home.addEventListener("click", () => {
-    frame.style.left = -352 + "px";
-    frame.style.bottom = -20 + "px";
+    const tween = Home.animate([
+        { transform: 'translate(0px, 0px)' },
+        { transform: 'translate(0, -10px)' },
+], {
+    duration: 250,
+    iterations: 2,
+    direction: "alternate",
+    easing: "ease-out"
 });
-Settings.addEventListener("click", () => {
-    frame.style.left = -104 + "px";
-    frame.style.bottom = -20 + "px";
 });
 Dashboard.addEventListener("click", () => {
-    frame.style.left = -228 + "px";
-    frame.style.bottom = -20 + "px";
+    const tween = Dashboard.animate([
+        { transform: 'translate(0px, 0px)' },
+        { transform: 'translate(0, -10px)' },
+], {
+    duration: 250,
+    iterations: 2,
+    direction: "alternate",
+    easing: "ease-out"
+});
+});
+Settings.addEventListener("click", () => {
+    const tween = Settings.animate([
+        { transform: 'translate(0px, 0px)' },
+        { transform: 'translate(0, -10px)' },
+], {
+    duration: 250,
+    iterations: 2,
+    direction: "alternate",
+    easing: "ease-out"
+});
 });
