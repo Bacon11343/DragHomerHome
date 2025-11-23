@@ -1,20 +1,44 @@
-<html>
-    <body>
-        <title>Drag Homer</title>
-        <head>
-             <button id="button1" name="button1" onclick="window.location.href='https://draghomer.netlify.app/'">Home</button>              
-           <button id="button2" name="button2">Dashboard</button>
-            <button id="button3" name="button3" onclick="window.location.href='https://draghomersettings.netlify.app/'">Settings</button>
-           <h1 id="Title">
-            Be able to drag Homer in this Website (early development) 🤣
-           </h1>
-           <div id="unityContainer" style="width:960px; height:600px;"></div>
-            <script src="DragHomer Project unity.loader.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag Homer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <button id="button1" onclick="window.location.href='https://draghomer.netlify.app/'">Home</button>
+        <button id="button2">Dashboard</button>
+        <button id="button3" onclick="window.location.href='https://draghomersettings.netlify.app/'">Settings</button>
+    </header>
 
-           <script src="script.js"></script>
-           <link rel="stylesheet" href="style.css">
-        </head>
-    </body>
+    <h1 id="Title">
+        Be able to drag Homer in this Website (early development) 🤣
+    </h1>
+
+    <!-- Unity WebGL container -->
+    <div id="unityContainer" style="width:960px; height:600px; margin:auto;"></div>
+
+    <!-- Unity Loader Script -->
+    <script src="DragHomer Project unity.loader.js"></script>
+    <script>
+        // Initialize Unity inside the container
+        var unityInstance = createUnityInstance(
+            document.querySelector("#unityContainer"),
+            {
+                dataUrl: "Build/yourproject.data",
+                frameworkUrl: "Build/yourproject.framework.js",
+                codeUrl: "Build/yourproject.wasm",
+                streamingAssetsUrl: "StreamingAssets",
+                companyName: "YourCompany",
+                productName: "DragHomer",
+                productVersion: "1.0"
+            },
+            function(progress) {
+                console.log("Loading progress: " + progress);
+            }
+        );
+    </script>
+</body>
 </html>
-
-
