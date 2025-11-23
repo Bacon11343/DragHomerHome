@@ -1,73 +1,16 @@
-body {
-    background-color: rgb(39, 39, 39);
-    text-align: center;
-    font-family: "Montserrat SemiBold";
-    color: black;
-}
-h1 {
-    font-size: 24px;
-    transition-timing-function: ease-in-out;
-    font-weight: bolder;
-    text-align: center;
-    position: relative;
-    font-family: "Montserrat SemiBold";
-    transform-origin: center center;
-    animation: pulse 0.5s infinite alternate ease-in-out;
-    color: rgb(255, 255, 255);}
-
-@keyframes pulse {
-  0%   { transform: scale(1); }
-  100% { transform: scale(1.05); }
-}
-button[name="button1"] {
-    position: relative;
-    font-size: 20px;
-    font-weight: lighter;
-    text-align: center;
-    font-family: "Montserrat SemiBold";
-    width: 120px;
-    height: 40px;
-    background-color: rgb(48, 48, 48);
-    border-radius: 10px;
-    color: white;
-}
-button[name="button2"] {
-    font-size: 20px;
-    font-weight: lighter;
-    text-align: center;
-    font-family: "Montserrat SemiBold";
-    width: 130px;
-    height: 40px;
-    background-color: rgb(48, 48, 48);
-    border-radius: 10px;
-    color: white;
-}
-button[name="button3"] {
-    font-size: 20px;
-    font-weight: lighter;
-    text-align: center;
-    font-family: "Montserrat SemiBold";
-    width: 120px;
-    height: 40px;
-    background-color: rgb(48, 48, 48);
-    border-radius: 10px;
-    color: white;
-}
-
-button:hover {
-    box-shadow: 0 0 10px rgb(150, 150, 150);
-    background-color: rgb(65, 65, 65);
-    cursor: pointer;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-}
-button:not(:hover) {
-   
-    background-color: rgb(48, 48, 48);
-    cursor: pointer;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-}
-
+body { padding: 0; margin: 0 }
+#unity-container { position: absolute }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
+#unity-canvas { background: #1F1F20 }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
+#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
+#unity-footer { position: relative }
+.unity-mobile #unity-footer { display: none }
+#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
