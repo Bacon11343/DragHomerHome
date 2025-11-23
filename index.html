@@ -17,29 +17,10 @@
         Be able to drag Homer in this Website (earlydevelopment) 🤣
     </h1>
 
-    <!-- Unity WebGL container -->
-    <div id="unityContainer" style="width:960px; height:600px; margin:auto;"></div>
 
-    <!-- Unity Loader Script -->
-    <script src="DragHomer Project unity.loader.js"></script>
-    <script>
-        // Initialize Unity inside the container
-        var unityInstance = createUnityInstance(
-            document.querySelector("#unityContainer"),
-            {
-                dataUrl: "Build/yourproject.data",
-                frameworkUrl: "Build/yourproject.framework.js",
-                codeUrl: "Build/yourproject.wasm",
-                streamingAssetsUrl: "StreamingAssets",
-                companyName: "YourCompany",
-                productName: "DragHomer",
-                productVersion: "1.0"
-            },
-            function(progress) {
-                console.log("Loading progress: " + progress);
-            }
-        );
-    </script>
+
+    
+   
 </body>
 </html>
 
